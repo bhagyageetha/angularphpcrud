@@ -1,0 +1,32 @@
+<div ng-controller="myCtrl">
+		<center>
+			<a ng-href="insert">Add New</a>
+			<table border="1" cellspacing="0" cellpadding="5">
+				<thead>
+				<tr>
+					<th>Name</th>
+					<th>Email</th>
+					<th>Mobile</th>
+					<th>Address</th>
+					<th>Image</th>
+					<th>Action</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr ng-if="!isEmpty(student_lists)" ng-repeat="student_list in student_lists">
+					<td>{{student_list.NAME}}</td>
+					<td>{{student_list.EMAIL}}</td>
+					<td>{{student_list.MB_NO}}</td>
+					<td>{{student_list.ADDRESS}}</td>
+					<td><img src="images/{{student_list.IMAGE}}" width="50" height="50"></td>
+					<td><a ng-href="update/{{student_list.ID}}">Edit</a>
+						| <button ng-click="deleteStudent(student_list.ID)">Delete</button></td>
+				</tr>
+				<tr ng-if="isEmpty(student_lists)">
+					<td colspan="8" style="text-align:center"> No Rows Are Found</td>
+				</tr>
+				</tbody>
+			</table>
+
+		</center>
+</div>

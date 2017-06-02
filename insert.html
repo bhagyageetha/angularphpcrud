@@ -1,0 +1,32 @@
+
+<div ng-controller="myCtrl">
+		<center>
+		<h2>Add Student</h2>
+		<form name="myForm" method="POST" enctype="formdata/multipart">
+			<table>
+			<tr>
+			<td><label>Name</label></td>
+			<td><input type="text" name="name" ng-model="add_student.name"></td>
+			</tr><tr>
+			<td><label>Email</label></td>
+			<td><input type="email" name="email" ng-model="add_student.email"></td>
+			</tr><tr>
+			<td><label>Mobile No</label></td>
+			<td><input type="number" name="mbno" ng-model="add_student.mbno"></td>
+			</tr><tr>
+			<td><label>Address</label></td>
+			<td><input type="text" name="address" ng-model="add_student.address"></td>
+			</tr><tr>
+			<td><label>Image</label></td>
+			<td><input type="file" name="f1"  file-model="student_files">
+			</td>
+			</tr>
+			<tr>
+			<td></td>
+			<td><input type="submit" name="submit" value="submit" ng-click="addStudent(add_student)"></td>
+			</tr>
+			</table>
+		</form>
+		</center>
+		</center>
+</div>
